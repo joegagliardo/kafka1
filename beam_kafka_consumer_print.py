@@ -9,8 +9,10 @@ def run_pipeline():
   with beam.Pipeline() as p:
     (p
      | 'Read from Kafka' >> ReadFromKafka(consumer_config=
-                                {'bootstrap.servers': brokers}
-#                                ,'auto.offset.reset': 'latest'},
+                                {
+                                 'bootstrap.servers': brokers
+                                ,'auto.offset.reset': 'latest'
+                                }
                             , topics=[kafka_topic])
      | 'Print' >> beam.Map(print)
     )
@@ -22,5 +24,5 @@ def run_pipeline():
     # )
 
 if __name__ == '__main__':
-  run_pipeline()
+   run_pipeline()
     

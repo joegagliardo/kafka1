@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-# spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.1 receiver1.py
+# spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.1 spark_kafka_consumer_print.py
+
 
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
